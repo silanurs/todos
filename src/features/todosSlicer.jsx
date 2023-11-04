@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 const todosSlice = createSlice({
     name:'todos',
-    initialState: {value:'', priority:'', completed:'' },
+    initialState: {description:[], date:[], checked:[] },
     reducers: {
         todoAdded(state, action){
+            
 
         },
         todoIsComplete(state, action){
