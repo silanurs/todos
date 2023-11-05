@@ -9,6 +9,9 @@ html, body {
     background-color:#D2B48C;
 }
 header {
+  position:relative;
+  right:0;
+  min-width:100vw;
   display:flex;
   justify-content:center;
   font-size:2rem;
@@ -30,6 +33,7 @@ form {
     display:flex;
     justify-content:flex-start;
     align-items: center;
+    font-size:2rem;
 }
 .round {
     position: relative;
@@ -80,6 +84,7 @@ form {
   #description{
     margin-left:20px;
     border:none;
+    width: 35vw;
     outline:none;
   }
   #date{
@@ -88,17 +93,23 @@ form {
     border:none;
   }
   .delete{
-    margin-left:10px;
-    font-size:2rem;
+   margin-left:auto;
+    font-size:1.5rem;
   }
   .delete:hover{
     font-weight: 900;
   }
   article {
-    height:77vh;
+    height:75vh;
     background-color:#DFE0DF;
     overflow-x:hidden;
     overflow-y:auto;
   }
+  #list {
+    display:flex;
+    justify-content:flex-start;
+    gap: 2vw;
+  }
+  
  
  
