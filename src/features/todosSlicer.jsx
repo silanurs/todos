@@ -2,21 +2,21 @@ import { createSlice } from "@reduxjs/toolkit";
 const todosSlice = createSlice({
     name:'todos',
     initialState: {
-        list:[
-        {description:"Learn how to use react-redux", date:"10/11/2023", complete: false}
-    ]},
+        todos:[
+            {id:0, description:"Learn react!", isComplete: "false"}
+        ]
+    },
+      
     reducers: {
         todoAdded(state, action){
-            const todo = {description:action.payload, date:action.payload, complete:action.payload};
-            state.todos.list.push(todo)
+           let todo = {id:state.todos.length, description:action.payload, isComplete:"false"}
+           state.todos.push(todo)
         },
-        isComplete(state, action){
-
-        },
-        
-        
+       isChecked(state,action)  {
+           console.log(action.payload)
+       }  
     }
 })
 
-export const {todoAdded, todoIsComplete} = todosSlice.actions;
+export const {todoAdded, isChecked} = todosSlice.actions;
 export default todosSlice.reducer
